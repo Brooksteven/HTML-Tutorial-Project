@@ -1,0 +1,249 @@
+/*paste your fonts here*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* reset padding and margin because by default elements have padding and margin on them and you don't want that. I want the control to set the padding and margin myself.*/
+* {
+    /*margins and padding are listed in increments of 8 excluding 0*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*now all font in application will use this font*/
+    font-family: 'Roboto', sans-serif;
+}
+
+/*here is where we style the nav*/
+nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    /*make links in the middle of nav bar instead of toward the top*/
+    align-items: center;
+    /*stop elements from touching the sides*/
+    padding: 0 16px;
+    /*set background color to the nav*/
+    background-color: #cafdff;
+}
+
+
+header {
+    /*set background color to header section*/
+    background-color: #eadcff;
+    /*calc property allows us to go to the next section as soon as you scroll. 100vh by itself won't do that.*/
+    height: calc(100vh - 70px);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+/*subheader targets p more specifically without affecting the other p's.*/
+.subheader {
+    font-size: 36px;
+    /*add spacing between all the elements*/
+    margin: 16px 0 24px 0
+}
+
+button {
+    background-color: #05c7cf;
+    /*text color*/
+    color: white;
+    /*takes away the line around the button box*/
+    border: none;
+    /*this makes the button bigger*/
+    padding: 8px 16px;
+    font-size: 24px;
+    /*this changes the cursor when you hover over the button*/
+    cursor: pointer;
+}
+
+/*turn anchor tags/links to black and change font size and weight*/
+a {
+    color: #000;
+    font-size: 24px;
+    /*font-weight 700 is bold*/
+    font-weight: 700;
+}
+
+/*here we make the image of computer smaller*/
+.logo {
+    width: 300px;
+}
+
+/*get links about, discord, and contact side by side instead of on top of each other*/
+ul {
+    display: flex;
+}
+
+/*remove dots coming from links and add padding to space the links out*/
+li {
+    list-style-type: none;
+    padding-left: 16px;
+}
+
+
+/* I didn't like how my elements stretch the entire width of the page so I added a div in the header that wraps the entire header and call the div class row.*/
+.row {
+    width: 100%;
+    /*makes the page responsive when you change the size of the page*/
+    max-width: 1300px;
+    /*display: flex to make the text and image side by side*/
+    display: flex;
+    /*centers everything*/
+    align-items: center;
+    justify-content: center;
+}
+
+/*Use # for id's.*/
+/*this is how you add padding to all id's that you want to be similar*/
+#about,
+#discord,
+#contact,
+#footer {
+    padding: 48px 0;
+}
+
+/*
+
+ABOUT SECTION
+
+*/
+
+#about {
+     /*add background color on about section*/
+     background-color: #f8ffdc;
+}
+
+/*styling the about heading*/
+h2 {
+   font-size: 60px;
+   text-align: center;
+   margin-bottom: 24px; 
+}
+
+/*Now make the div and figure side by side. You can't do this by adding display: flex in the #about section
+because it will make the about heading also side by side instead of in the title section. So add another element (div) after the <h2>About</h2>
+and before the </section> that completes the about section*/
+/*This is bm css. The block is section and the element is description seperated by two underscores.*/
+.section__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*the image is too large so create this class and re-sized the image*/
+.about__img--wrapper {
+    width: 40%;
+    /* add space (padding) around the picture*/
+    /*move this padding under the .about__img--wrapper, section__description--wrapper
+    padding: 0 24px;*/
+}
+
+/*image will fill the figure of the about__img--wrapper width; however it's not filling 40% because the div doesn't have any width. So now we need to target the div so we can make sure the image is actually 40%.*/
+img {
+    width: 100%;
+}
+
+/*this div, which represents the p element (text in the section), will be 60% of the width of the entire section. This will cause the image to then become 40% of the 100% width of the entire section.*/
+.section__description--wrapper {
+    width: 60%;
+    /*add space (padding) between the picture and the paragraph*/
+    /*move this padding under the .about__img--wrapper, section__description--wrapper so you can change both the text
+    padding and the image padding at the same time
+    padding: 0 24px;*/
+}
+
+.about__img--wrapper,
+.section__description--wrapper {
+    padding: 0 24px;
+}
+
+/*make paragraph text bigger*/
+.section__description--para {
+   font-size: 20px; 
+   line-height: 1.5;
+   margin-bottom: 24px;
+}
+
+/*
+
+ABOUT SECTION
+
+*/
+
+#discord {
+    background-color: #cefeff;
+}
+
+/*
+
+CONTACT SECTION
+
+*/
+
+#contact {
+    background-color: #dce9ff;
+    /* you can do these three lines of code to center the email and message or
+    you can do margin: 0 auto under the form section:
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
+
+
+form {
+    width: 100%;
+    /* we don't want the boxes stretch all the way to the other end of the page so we do max-width*/
+    max-width: 600px;
+    /*make message and email on side by side first then do flex-direction: column*/
+    display: flex;
+    /*make message and email on top of each other*/
+    flex-direction: column;
+    /* center email and message with margin*/
+    margin: 0 auto;
+}
+
+
+input, textarea {
+    margin-bottom: 24px;
+    font-size: 20px;
+    padding: 6px 12px;
+}
+
+
+/*
+
+FOOTER SECTION
+
+*/
+
+footer {
+    background-color: #aaf5ff;
+    /*first make them side by side*/
+    display: flex;
+    /*second make them on top of each other which allows us to then do
+    align-item: center to center it*/
+    flex-direction: column;
+    align-items: center;
+}
+
+/*target footer logo*/
+.footer__logo {
+    max-width: 480px;
+    /*add space between the frontend simplified image and a tags*/
+    margin-bottom: 16px;
+}
+
+/*add space here*/
+.footer__links {
+    margin-bottom: 32px;
+}
+
+/*targets the a tags and we add padding (space) here*/
+.footer__link {
+    padding: 0 /*top and bottom*/ 16px /*left and right*/;
+}
+
