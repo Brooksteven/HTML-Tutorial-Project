@@ -90,6 +90,8 @@ li {
     width: 100%;
     /*makes the page responsive when you change the size of the page*/
     max-width: 1300px;
+    /*center the about section*/
+    margin: 0 auto;
     /*display: flex to make the text and image side by side*/
     display: flex;
     /*centers everything*/

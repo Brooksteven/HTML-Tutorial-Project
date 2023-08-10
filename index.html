@@ -37,51 +37,57 @@
     <main>
       <section id="about">
         <h2>About</h2>
-        <!--Use this class for the div discord class as well to save time styling-->
-        <div class="section__description">
-             <!--Use this class for the div for discord class as well to save time styling-->
-          <div class="section__description--wrapper">
-            <!--Use this class for the p element for discord class as well to save time styling-->
-            <p class="section__description--para">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Corrupti, optio in facilis recusandae dicta cumque velit magnam
-              doloremque perspiciatis odio, itaque blanditiis qui doloribus
-              suscipit. Excepturi ullam itaque quia accusamus.
-            </p>
-            <p class="section__description--para">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Corrupti, optio in facilis recusandae dicta cumque velit magnam
-              doloremque perspiciatis odio, itaque blanditiis qui doloribus
-              suscipit. Excepturi ullam itaque quia accusamus.
-            </p>
+        <div class="row">
+          <!--Use this class for the div discord class as well to save time styling-->
+          <div class="section__description">
+            <!--Use this class for the div for discord class as well to save time styling-->
+            <div class="section__description--wrapper">
+              <!--Use this class for the p element for discord class as well to save time styling-->
+              <p class="section__description--para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Corrupti, optio in facilis recusandae dicta cumque velit magnam
+                doloremque perspiciatis odio, itaque blanditiis qui doloribus
+                suscipit. Excepturi ullam itaque quia accusamus.
+              </p>
+              <p class="section__description--para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Corrupti, optio in facilis recusandae dicta cumque velit magnam
+                doloremque perspiciatis odio, itaque blanditiis qui doloribus
+                suscipit. Excepturi ullam itaque quia accusamus.
+              </p>
+            </div>
+            <figure class="about__img--wrapper">
+              <img src="./assets/about.jpg" alt="" />
+            </figure>
           </div>
-          <figure class="about__img--wrapper">
-            <img src="./assets/about.jpg" alt="" />
-          </figure>
         </div>
       </section>
+
       <section id="discord">
         <h2>Discord</h2>
-        <div class="section__description">
-        <figure class="about__img--wrapper">
-            <img src="./assets/discord.png" alt="Discord" />
-        </figure>
-        <div class="section__description--wrapper">
-          <p class="section__description--para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ex
-            vero inventore animi consequuntur et ab, hic nemo repudiandae
-            sapiente quas autem atque minus sit architecto laboriosam mollitia
-            non officia!
-          </p>
-          <p class="section__description--para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ex
-            vero inventore animi consequuntur et ab, hic nemo repudiandae
-            sapiente quas autem atque minus sit architecto laboriosam mollitia
-            non officia!
-          </p>
+        <div class="row">
+          <div class="section__description">
+            <figure class="about__img--wrapper">
+              <img src="./assets/discord.png" alt="Discord" />
+            </figure>
+            <div class="section__description--wrapper">
+              <p class="section__description--para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti ex vero inventore animi consequuntur et ab, hic nemo
+                repudiandae sapiente quas autem atque minus sit architecto
+                laboriosam mollitia non officia!
+              </p>
+              <p class="section__description--para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti ex vero inventore animi consequuntur et ab, hic nemo
+                repudiandae sapiente quas autem atque minus sit architecto
+                laboriosam mollitia non officia!
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
       </section>
+
       <section id="contact">
         <h2>Contact</h2>
         <form action="">
@@ -90,7 +96,10 @@
           <!--the type cane be text, email, and password-->
           <input type="email" placeholder="jane@example.com" />
           <span>Message</span>
-          <textarea type="text" placeholder="Cool website, lets get connected!"></textarea>
+          <textarea
+            type="text"
+            placeholder="Cool website, lets get connected!"
+          ></textarea>
           <button>Contact Us!</button>
         </form>
       </section>
