@@ -44,7 +44,7 @@ h1 {
 .subheader {
     font-size: 36px;
     /*add spacing between all the elements*/
-    margin: 16px 0 24px 0
+    margin: 16px 0 24px 0;
 }
 
 button {
@@ -104,7 +104,7 @@ li {
 #about,
 #discord,
 #contact,
-#footer {
+footer {
     padding: 48px 0;
 }
 
@@ -206,6 +206,7 @@ form {
     flex-direction: column;
     /* center email and message with margin*/
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 
@@ -249,3 +250,107 @@ footer {
     padding: 0 /*top and bottom*/ 16px /*left and right*/;
 }
 
+/*if the screen goes under 728px then this media query is activated
+/* this media query is most used for SMALL PHONES, TABLETS, LARGE SMARTPHONES*/
+@media (max-width: 728px) {
+    .row {
+        /*puts divs on top of each other*/
+        flex-direction: column;  
+    }
+
+    header {
+        height: calc(140vh - 70px);
+    }
+    
+
+    /*add margin between computer image and best place text*/
+    /*this targets the best place div*/
+    .home__description {
+        margin-bottom: 24px;
+        /*center the button*/
+        display: flex; /*puts everything inside tghis div side by side but we don't want that 
+        so we use flex-direction: column to make them stack on top of each other*/
+        flex-direction: column;
+        /*put the buttton back in the center after doing max-width:240px*/
+        align-items: center;
+    }
+    /* make the button smaller or bigger*/
+    .home__description--button {
+        max-width: 240px;
+    }
+
+
+    /*for small screens align headings in the center*/
+    h1 {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    /*align paragraph text in the middle too*/
+    .subheader {
+        text-align: center;
+        font-size: 28px;    
+    }
+
+    /*align button which is located in home__description*/
+
+/*
+Nav Bar
+*/
+
+ul {
+    display: none;
+}
+   
+.section__description {
+    flex-direction: column;
+}
+
+.section__description--wrapper {
+    width: 100%;
+}
+
+.about__img--wrapper {
+    width: 100%;
+}
+
+/*
+DISCORD
+*/
+
+#discord .section__description {
+    /*this will flip the discord image and the text in the discord section around*/
+    flex-direction: column-reverse;
+}
+
+/*
+CONTACT
+*/
+
+
+/*
+FOOTER
+*/
+
+footer {
+    padding: 48px 24px;
+}
+
+/*make logo smaller*/
+.footer__logo {
+    max-width: 360px;
+}
+
+/*fix links*/
+.footer__link {
+    /*space in between the links*/
+    padding: 0 4px;
+    font-size: 18px;
+}
+
+/*reduce the space between the links and the copyright frontend simplified*/
+.footer__links {
+    margin-bottom: 24px;
+}
+
+}
