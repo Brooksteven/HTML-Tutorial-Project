@@ -105,15 +105,60 @@
       </section>
     </main>
 
-    <footer>
-      <img class="footer__logo" src="./assets/FES.svg" alt="" />
-      <div class="footer__links">
-        <a class="footer__link" href="#about">About</a>
-        <a class="footer__link" href="#discord">Discord</a>
-        <a class="footer__link" href="#contact">Contact</a>
-        <a class="footer__link" href="">Courses</a>
+   <!--FOOTER-->
+  <footer>
+    <div class="container">
+      <!--add row to give margin to left  and right-->
+      <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+          <!--creating class to target personal logo-->
+          <figure class="footer__logo">
+            <!--personal logo image-->
+            <img src="./assets/logo.svg" class="footer__logo--img" alt="">
+          </figure>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fas fa-arrow-up"></i>
+          </span>
+        </a>
+        <!--this is where I put my social links-->
+        <div class="footer__social--list">
+          <!--this is where I link my github link-->
+          <a href="https://github.com/brooksteven" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/brooklynn-stevenson/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="#" onclick="toggleModal()" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <!--add resume here in href-->
+          <a href="./assets/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <!--copyright section-->
+        <div class="footer__copyright">Copyright &copy; 2023 Brooklynn Stevenson</div>
       </div>
-      <p>Copyright Frontend Simplified</p>
-    </footer>
-  </body>
+    </div>
+  </footer>
+
+</body>
 </html>
